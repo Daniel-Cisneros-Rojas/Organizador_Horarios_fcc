@@ -41,7 +41,6 @@ function Filtros({materias,datos,ponerGrupos,ponerIntervaloTiempo,profes}){
    const[materiasSeleccionadas,setMateriasSeleccionadas]=useState([]);
    const handleChange=(selectedOption)=>{
     setMateriasSeleccionadas(selectedOption);
-    calcularHorarios();
   
    };
    const[profesSeleccionados,setProfesSeleccionados]=useState([]);
@@ -494,7 +493,8 @@ const theme = createTheme({
       markLabel:{
         backgroundColor:'purple',
         color:'white',
-        borderRadius:'4px'
+        borderRadius:'4px',
+        fontSize:'11px'
       },
       
       
