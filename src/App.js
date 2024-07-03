@@ -42,14 +42,14 @@ function App() {
 
   
   return (
-    <div className="App">
-      <Leer 
+    <>
+    
+    <div className="App" >
+     <Leer 
       ponerDatos={ponerDatos}
       ponerMaterias={ponerMaterias}
       ponerProfesores={ponerProfesores}
       />
-      
-    
       <Filtros
       materias={materias}
       datos={datos}
@@ -63,8 +63,9 @@ function App() {
       grupos={grupos}
       intervaloTiempo={intervaloTiempo}
       />
-      
     </div>
+    
+    </>
   );
 }
 

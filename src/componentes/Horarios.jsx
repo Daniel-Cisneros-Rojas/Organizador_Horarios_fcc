@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper,Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { Scheduler } from "@aldabil/react-scheduler";
 
 
@@ -17,10 +17,10 @@ return(
     
     
     <>
-    <Box width={900} height={50} bgcolor={"black"} color={"white"}>
+    <Box height={50} bgcolor={"black"} color={"white"} textAlign={'center'} justifyContent={'center'} >
         Horario Numero : {c}
     </Box>
-     <Box width={900}>
+     <Box >
         <Scheduler
         day={null}
         month={null}

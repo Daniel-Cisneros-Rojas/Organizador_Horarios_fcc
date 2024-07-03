@@ -1,6 +1,10 @@
-import { Slider } from "@mui/material";
+import { Box, Slider } from "@mui/material";
 import React,{useState} from "react";
 import Select from "react-select";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import makeAnimated from 'react-select/animated';
+import '../estilos/Filtros.css'
+import { FaRegCalendarCheck } from "react-icons/fa";
 
 
 function Filtros({materias,datos,ponerGrupos,ponerIntervaloTiempo,profes}){
@@ -37,6 +41,7 @@ function Filtros({materias,datos,ponerGrupos,ponerIntervaloTiempo,profes}){
    const[materiasSeleccionadas,setMateriasSeleccionadas]=useState([]);
    const handleChange=(selectedOption)=>{
     setMateriasSeleccionadas(selectedOption);
+    calcularHorarios();
   
    };
    const[profesSeleccionados,setProfesSeleccionados]=useState([]);
@@ -445,22 +450,91 @@ function Filtros({materias,datos,ponerGrupos,ponerIntervaloTiempo,profes}){
 
     
   }
+
+  /*Styles para select */
+  const customStyles={
+    option:(provided,{isFocused})=>({
+      ...provided,
+      backgroundColor:isFocused?'fuchsia':'white',
+      color:isFocused?'white':'black',
+      borderBottom:'1px dotted purple',
+      
+    }),
+    control:(provided)=>({
+      ...provided,
+      backgroundColor:'black',
+      
+    }),
+    multiValue:(provided)=>({
+      ...provided,
+      backgroundColor:'white',
+      color:'black',
+      
+    }),
+    multiValueLabel:(provided)=>({
+      ...provided,
+      backgroundColor:'purple',
+      color:'white'
+    })
+
+  };
+  /*styles para slider */
+  
+
+const theme = createTheme({
+ components:{
+  MuiSlider:{
+    styleOverrides:{
+      root:{
+        color:'purple'
+      },
+      thumb:{
+        backgroundColor:'fuchsia',
+      },
+      markLabel:{
+        backgroundColor:'purple',
+        color:'white',
+        borderRadius:'4px'
+      },
+      
+      
+    }
+  }
+ }
+});
+const animatedComponents = makeAnimated();
   
     return(
       <>
       
-      <Select
+     <Box marginTop={2} marginBottom={1}>
+     <Select
+      components={animatedComponents}
+      maxMenuHeight={200}
       options={materias}
       value={materiasSeleccionadas}
       onChange={handleChange}
       isMulti={true}
+      placeholder={"Escoje las materias que incluir"}
+      styles={customStyles}
       />
-      <Select
+     </Box>
+
+     <Box>
+     <Select
+      components={animatedComponents}
+      maxMenuHeight={200}
       options={profes}
       value={profesSeleccionados}
       onChange={handleChange3}
       isMulti={true}
+      placeholder={"Selecciona si quieres que contenga a profesores especificos"}
+      styles={customStyles}
       />
+     </Box>
+
+      <Box marginTop={5} marginBottom={5} marginLeft={5} marginRight={2}>
+      <ThemeProvider theme={theme}>
       <Slider
       getAriaLabel={() => 'Minimum distance shift'}
       value={value}
@@ -469,12 +543,15 @@ function Filtros({materias,datos,ponerGrupos,ponerIntervaloTiempo,profes}){
       valueLabelFormat={(value)=>`${value}:00 hrs`}
       marks={marks}
       step={2}
-      min={5}
+      min={7}
       max={21}
-      disableSwap
-      />
+      disableSwap={true}
       
-      <button onClick={calcularHorarios}>Obtener horarios</button>
+      />
+      </ThemeProvider>
+      </Box>
+      
+      <button onClick={calcularHorarios}><i><FaRegCalendarCheck /></i>Obtener horarios</button>
       </>
     );
 }

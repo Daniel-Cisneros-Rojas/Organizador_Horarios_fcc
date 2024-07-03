@@ -1,5 +1,7 @@
 import pdfToText from 'react-pdftotext';
-
+import '../estilos/lectorpdf.css'
+import { Box } from '@mui/material';
+import { FaFileDownload } from "react-icons/fa";
  function PDFParserReact({ponerDatos,ponerMaterias,ponerProfesores}) {
 
   let prueba=[];
@@ -233,12 +235,16 @@ import pdfToText from 'react-pdftotext';
   
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <input type="file" accept="application/pdf" onChange={extractText} />
+    <Box width={'100%'} textAlign={'center'} justifyContent={'center'} marginTop={2}>
       
-      </header>
-    </div>
+      <input type="file" id="file" accept="application/pdf" onChange={extractText} />
+     
+      <label htmlFor='file'><i><FaFileDownload/></i>Cargar archivo de Horarios</label>
+      
+      
+    </Box>
+        
+     
   );
 }
 
