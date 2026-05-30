@@ -1,8 +1,28 @@
+Este proyecto, desarrollado con React, está orientado a la generación de horarios académicos a partir del PDF oficial de la FCC. La aplicación realiza un análisis del documento para recuperar correctamente la información contenida en él, asegurando que los datos puedan ser procesados de manera confiable.
+
+#PDF EJEMPLO
+
+[PA_PRIMAVERA_2024_SEMESTRAL_ICC.pdf](https://github.com/user-attachments/files/28426939/PA_PRIMAVERA_2024_SEMESTRAL_ICC.pdf)
+
+
+El usuario puede aplicar filtros personalizados, seleccionando las materias que desea incluir y definiendo el intervalo de horas en el que planea asistir. Posteriormente, un algoritmo de colisión organiza los datos en una gráfica donde los días se representan en el eje X y las horas en el eje Y. Este enfoque garantiza que ninguna materia se empalme y que únicamente se generen combinaciones válidas.
+
+<img width="1914" height="449" alt="image" src="https://github.com/user-attachments/assets/139a5b3a-b5ac-43cc-885c-9df2b8abbf45" />
+
+
+La herramienta muestra todas las configuraciones de horario que cumplen con los filtros establecidos, ofreciendo una experiencia interactiva y eficiente. Gracias a la interfaz dinámica construida con React, el sistema combina análisis de datos y visualización intuitiva para optimizar la planificación académica de manera práctica y moderna.
+
+<img width="1890" height="800" alt="image" src="https://github.com/user-attachments/assets/cbe9579a-8f96-4a57-a7c1-ddda88f362f3" />
+
+#INFORMACION ADICIONAL
+
+[Mi horario.pptx](https://github.com/user-attachments/files/28426985/Mi.horario.pptx)
+
+
 # Pagina
 https://mi-horario-fcc.netlify.app/
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -47,21 +67,7 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
