@@ -1,6 +1,11 @@
+## Organizador Horarios FCC
 Este proyecto, desarrollado con React, está orientado a la generación de horarios académicos a partir del PDF oficial de la FCC. La aplicación realiza un análisis del documento para recuperar correctamente la información contenida en él, asegurando que los datos puedan ser procesados de manera confiable.
 
-#PDF EJEMPLO
+## Video explicativo
+Puedes ver el video completo en YouTube aquí:  
+[Ver en YouTube](https://www.youtube.com/watch?v=LEbcHuxM7F8)
+
+# PDF EJEMPLO
 
 [PA_PRIMAVERA_2024_SEMESTRAL_ICC.pdf](https://github.com/user-attachments/files/28426939/PA_PRIMAVERA_2024_SEMESTRAL_ICC.pdf)
 
@@ -14,7 +19,7 @@ La herramienta muestra todas las configuraciones de horario que cumplen con los 
 
 <img width="1890" height="800" alt="image" src="https://github.com/user-attachments/assets/cbe9579a-8f96-4a57-a7c1-ddda88f362f3" />
 
-#INFORMACION ADICIONAL
+# INFORMACION ADICIONAL
 
 [Mi horario.pptx](https://github.com/user-attachments/files/28426985/Mi.horario.pptx)
 
